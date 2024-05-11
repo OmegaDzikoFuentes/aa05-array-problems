@@ -1,38 +1,61 @@
 const findMinimum = arr => {
 
-  // Your code here 
+  //time complexity O(n)
+  //space complexity O(1)
+
+  let smallest = arr[0];
+
+  for (let i = 1; i < arr.length; i++) {
+
+    if(arr[i] < smallest) {
+
+      smallest = arr[i];
+
+    }
+
+  }
+
+  return smallest;
 
 };
 
 const runningSum = arr => {
 
-  // Your code here 
+let numsArr = arr;
+
+  let reduced = numsArr.reduce((acc, num) => {
+
+      return acc += num;
+
+  });
+
+  return reduced;
 };
 
 const evenNumOfChars = arr => {
 
-  // Your code here 
+  // Your code here
 };
 
 const smallerThanCurr = arr => {
 
-  // Your code here 
+  // Your code here
 
 };
 
 const twoSum = (arr, target) => {
 
-  // Your code here 
+  // Your code here
 };
 
 const secondLargest = arr => {
 
-  // Your code here 
+  // Your code here
 };
 
 const shuffle = (arr) => {
 
-  // Your code here 
+  // Your code here
 };
 
 
