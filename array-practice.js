@@ -21,25 +21,66 @@ const findMinimum = arr => {
 
 const runningSum = arr => {
 
-let numsArr = arr;
+let sumArr = [];
 
-  let reduced = numsArr.reduce((acc, num) => {
+if(arr[0] === undefined) {
 
-      return acc += num;
+  return sumArr;
 
-  });
+} else {
 
-  return reduced;
+  sumArr.push(arr[0]);
+
 };
+for (let i = 1; i < arr.length; i++) {
+
+    sumArr.push(sumArr[i -1] + arr[i])
+
+}
+
+return sumArr;
+
+//time complexity O(n)
+//space comeplexity O(n)
+
+}
 
 const evenNumOfChars = arr => {
 
-  // Your code here
+//create a count variable
+let count = 0;
+
+//loop through arr
+for (let i = 0; i < arr.length; i++) {
+
+//store arr val in variable
+      let string = arr[i];
+
+//ask if arr val length mod 2 is zero
+  if(string.length % 2 === 0) {
+
+//if yes increment count
+        count++;
+
+  }
+
+}
+//return count
+
+return count;
+
+//time complexity O(n)
+//space complexity O(1)
+
 };
 
 const smallerThanCurr = arr => {
 
-  // Your code here
+  //create empty arr
+  //create count variable
+  //iterate through arr
+  //store current val in variable
+  //ask if curr val in arr is
 
 };
 
