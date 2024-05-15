@@ -77,16 +77,78 @@ return count;
 const smallerThanCurr = arr => {
 
   //create empty arr
-  //create count variable
+  let smallCount = [];
+
+
   //iterate through arr
+  for (let i = 0; i < arr.length; i++) {
+
+     //create count variable
+  let count = 0;
+
   //store current val in variable
-  //ask if curr val in arr is
+      let originalCurr = arr[i];
+
+  //iterate through same loop again
+      for (let j = 0; j < arr.length; j++) {
+
+          let compareValue = arr[j];
+
+  //ask if original current variable is less than new curr val
+              if(originalCurr > compareValue) {
+
+  //if yes increment count
+                      count++
+
+              }
+
+            }
+
+              //in original loop send count to arr
+            smallCount.push(count);
+
+          }
+
+  //return arr
+        return smallCount;
+
+        //time complexity O(n^2)
+        //space complexity O(n)
 
 };
 
 const twoSum = (arr, target) => {
 
-  // Your code here
+  //loop through the arr
+  for (let i = 0; i < arr.length; i++) {
+
+  //store curr va in variable
+  let currVal = arr[i];
+
+  //loop through same arr again
+    for (let j = 0; j < arr.length; j++) {
+
+  //store new curr in variable
+        let newCurrVal = arr[j];
+
+  //ask if old curr + new curr equal target
+        if(currVal + newCurrVal === target) {
+
+  //if yes return true
+              return true;
+
+        }
+
+      }
+
+    }
+
+  //otherwise false
+  return false;
+
+  //time complexity O(n^2)
+  //space complexity O(1);
+
 };
 
 const secondLargest = arr => {
